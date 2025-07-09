@@ -14,7 +14,7 @@
                     <ul class="flex items-center gap-6 text-sm">
                         <li>
                             <router-link class="text-gray-500 transition hover:text-gray-500/75" to="/about">
-                            {{ $t('about') }}
+                            {{ $t('about_me') }}
                             </router-link>
                         </li>
 

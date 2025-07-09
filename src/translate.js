@@ -15,7 +15,9 @@ const i18n = createI18n({
             skill: "A passionate web developer based in Cambodia.",
             //About Page
             about_me: "About Me",
-            about_des: "I am a student at the Cambodia Academy of Digital Technology (CADT) with a strong passion for building beautiful and functional web applications. I enjoy learning new technologies and solving complex problems. My goal is to become a skilled full-stack developer.",
+            about_des: "I'm San Piseth. Come from Tbong Khmum Province, Cambodia. I'm working at the Correctionnal Center 3 on the General Department of Prisons. I am a student at the Cambodia Academy of Digital Technology (CADT) with a strong passion for building beautiful and functional web applications. I enjoy learning new technologies and solving complex problems. My goal is to become a skilled full-stack developer.",
+            education: "Education",
+            working_experience: "Working Experience",
             //Project
             my_project: "My Project Collection",
             project_des: "These is my project collection with my GITHUB",
@@ -58,7 +60,9 @@ const i18n = createI18n({
             skill: "អ្នក​បង្កើត​គេហទំព័រ​ដែល​មាន​ឆន្ទៈ​ក្នុង​ប្រទេស​កម្ពុជា",
             //About Page
             about_me: "អំពីខ្ញុំ",
-            about_des: "ខ្ញុំជានិស្សិតនៅបណ្ឌិត្យសភាបច្ចេកវិទ្យាឌីជីថលកម្ពុជា (CADT) ដែលមានចំណង់ចំណូលចិត្តយ៉ាងខ្លាំងក្នុងការបង្កើតកម្មវិធីគេហទំព័រដ៏ស្រស់ស្អាត និងមុខងារ។ ខ្ញុំចូលចិត្តរៀនបច្ចេកវិទ្យាថ្មីៗ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។ គោលដៅរបស់ខ្ញុំគឺដើម្បីក្លាយជាអ្នកអភិវឌ្ឍន៍ស្គរពេញលេញដែលមានជំនាញ។",
+            about_des: "ខ្ញុំ សាន ពិសិដ្ឋ។ មកពីខេត្តត្បូងឃ្មុំ ប្រទេសកម្ពុជា។ ខ្ញុំកំពុងធ្វើការនៅមណ្ឌលអប់រំកែប្រែទី៣ នៃអគ្គនាយកដ្ឋានពន្ធនាគារ។ ខ្ញុំជានិស្សិតនៅបណ្ឌិត្យសភាបច្ចេកវិទ្យាឌីជីថលកម្ពុជា (CADT) ដែលមានចំណង់ចំណូលចិត្តយ៉ាងខ្លាំងក្នុងការបង្កើតកម្មវិធីគេហទំព័រដ៏ស្រស់ស្អាត និងមុខងារ។ ខ្ញុំចូលចិត្តរៀនបច្ចេកវិទ្យាថ្មីៗ និងដោះស្រាយបញ្ហាស្មុគស្មាញ។ គោលដៅរបស់ខ្ញុំគឺដើម្បីក្លាយជាអ្នកអភិវឌ្ឍន៍ស្គរពេញលេញដែលមានជំនាញ។",
+            education: "ការសិក្សា",
+            working_experience: "បទពិសោធការងារ",
             //Project
             my_project: "ការប្រមូលផ្ដុំដោយគម្រោង",
             project_des: "ទាំងនេះការប្រមូលផ្ដុំដោយគម្រោងនៅក្នុង GITHUB របស់ខ្ញុំ",
