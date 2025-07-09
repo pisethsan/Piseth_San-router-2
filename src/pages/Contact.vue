@@ -1,9 +1,13 @@
 <template>
     <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-md">
         <h2 class="font-moul text-xl font-bold text-gray-900 sm:text-3xl">
-            {{ $t('user_information') }}
+            {{ $t('contact_me') }}
         </h2>
-        <Form :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4">
+        <p class="text-gray-900 mb-8">{{ $t('contact_des') }}</p>
+        <Form name="ask-question"
+    method="post"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field" :validation-schema="validationSchema" @submit="handleSubmit" class="space-y-4">
             <!-- Name Field -->
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">
@@ -26,18 +30,18 @@
                 <ErrorMessage name="email" class="text-red-600 text-sm mt-1" />
             </div>
 
-            <!-- Age Field -->
+            <!-- Message Field -->
             <div>
-                <label class="block mb-1 text-sm font-medium text-gray-700">
-                    {{ $t('age') }}
+                <label class="block text-sm font-medium text-gray-900 mb-2">
+                    {{ $t('message') }}
                 </label>
-                <Field name="age" type="number" v-model="form.age"
+                <Field as="textarea" name="message" v-model="form.message" rows="5"
                     class="w-full px-4 py-2 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    :placeholder="$t('enter_your_age') " />
-                <ErrorMessage name="age" class="text-red-600 text-sm mt-1" />
+                    :placeholder="$t('enter_your_message') " />
+                <ErrorMessage name="message" class="text-red-600 text-sm mt-1" />   
             </div>
 
-            <!-- Submit Button -->
+            <!-- Send Button -->
             <button
           type="submit"
           :disabled="isLoading"
@@ -48,9 +52,9 @@
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
-            {{ $t('submit...') }}
+            {{ $t('Sending...') }}
           </span>
-          <span v-else>{{ $t('submit') }}</span>
+          <span v-else>{{ $t('Send') }}</span>
         </button>
         </Form>
     </div>
@@ -62,7 +66,7 @@ import { Form, Field, ErrorMessage } from 'vee-validate';
 import * as yup from 'yup';
 
 export default {
-    name: 'UserForm',
+    name: 'ContactForm',
     components: {
         Form,
         Field,
@@ -73,7 +77,7 @@ export default {
             form: {
                 name: '',
                 email: '',
-                age: ''
+                message: ''
             },
             isLoading: false, // Added loading state
             successMessage: '', // Added success message state
@@ -87,7 +91,7 @@ export default {
                         .min(3, 'Name must be at least 3 characters')
                         .required('Name is required'),
                     email: yup.string().email('Invalid email').required('Email is required'),
-                    age: yup.number().min(10, 'Minimum age of 10').max(120, 'Maximum age of 120').required('Age is required')
+                    message: yup.string().required('Message is required').min(3, 'Message must be at least 3 characters.'),
                 })
         }
     },
@@ -102,21 +106,24 @@ export default {
             this.isLoading = true;
             // You can add validation or API calls here
             try {
-                const response = await axios.post('https://68648e915b5d8d03397d8138.mockapi.io/api/v1/users', {
+                const response = await axios.post(`${import.meta.env.VITE_USER_API}/api/v1/contact`, {
                     name: this.form.name,
                     email: this.form.email,
-                    age: this.form.age
+                    message: this.form.message
                 })
                 console.log('Form submitted successfully:', response.data);
                 this.form = {
                     name: '',
                     email: '',
-                    age: ''
+                    message: ''
                 };
-                alert('User information submitted successfully!');
-                this.$router.push('/users');
+                alert('Your message has been submitted successfully!');
+                this.$router.push('/contact');
             } catch (error) {
                 console.error('Error submitting form:', error);
+                alert('There was an error submitting your message. Please try again.');
+            } finally {
+                this.isLoading = false;
             }
         }
     }

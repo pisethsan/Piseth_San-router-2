@@ -3,22 +3,21 @@
     <section>
         <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
             <header class="text-center">
-                <h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection {{ projects.length }}</h2>
+                <h2 class="font-moul text-xl font-bold text-gray-900 sm:text-3xl">{{ $t('my_project') }}  {{ projects.length }}</h2>
 
-                <p class="mx-auto mt-4 max-w-md text-gray-500">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
-                    dicta incidunt est ipsam, officia dolor fugit natus?
+                <p class="mx-auto mt-4 max-w-md text-gray-500 sm:text-xl">
+                    {{ $t('project_des') }} 
                 </p>
             </header>
 
             <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <li v-for="(project, index) in projects" :key="index">
+                <li v-for="project in projects" :key="project.id">
                     <router-link :to="`project/${project.name}`"
                         class="block rounded-md border border-gray-300 p-4 shadow-sm sm:p-6">
                         <div class="sm:flex sm:justify-between sm:gap-4 lg:gap-6">
                             <div class="sm:order-last sm:shrink-0">
                                 <img alt=""
-                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGML54I96lfKHTRkKYer07Nz_mjTEZtzRZbw&s"
                                     class="size-16 rounded-full object-cover sm:size-[72px]" />
                             </div>
 
@@ -27,7 +26,7 @@
                                     {{ project.name }}
                                 </h3>
 
-                                <p class="mt-1 text-sm text-gray-700">By John Doe</p>
+                                <p class="mt-1 text-sm text-gray-700">{{ $t('san_piseth') }}</p>
 
                                 <p class="mt-4 line-clamp-2 text-sm text-pretty text-gray-700">
                                     {{ project.description }}
@@ -38,7 +37,7 @@
                         <dl class="mt-6 flex gap-4 lg:gap-6">
                             <div class="flex items-center gap-2">
                                 <dt class="text-gray-700">
-                                    <span class="sr-only"> Published on </span>
+                                    <span class="sr-only"> {{ $t('public') }} </span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5">
@@ -47,12 +46,12 @@
                                     </svg>
                                 </dt>
 
-                                <dd class="text-xs text-gray-700">31/06/2025</dd>
+                                <dd class="text-xs text-gray-700">{{ $t('date') }}</dd>
                             </div>
 
                             <div class="flex items-center gap-2">
                                 <dt class="text-gray-700">
-                                    <span class="sr-only"> Reading time </span>
+                                    <span class="sr-only"> {{ $t('reading_time') }} </span>
 
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="size-5">
@@ -61,7 +60,7 @@
                                     </svg>
                                 </dt>
 
-                                <dd class="text-xs text-gray-700">12 minutes</dd>
+                                <dd class="text-xs text-gray-700">{{ $t('time') }}</dd>
                             </div>
                         </dl>
                     </router-link>
@@ -75,7 +74,7 @@
 import axios from 'axios';
 export default {
     async mounted() {
-        const response = await axios.get('https://api.github.com/users/KimangKhenng/repos?page=1&per_page=10', {
+        const response = await axios.get(`${import.meta.env.VITE_GITHUB_API}/pisethsan/repos?page=1&per_page=10`, {
             headers: {
                 'Authorization': `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`,
             }
