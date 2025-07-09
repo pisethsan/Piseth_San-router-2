@@ -1,7 +1,7 @@
 <template>
     <footer class="bg-white">
         <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-            <!-- <div class="lg:flex lg:items-start lg:gap-8">
+            <div class="lg:flex lg:items-start lg:gap-8">
                 <div class="text-teal-600">
                     <img alt=""
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGML54I96lfKHTRkKYer07Nz_mjTEZtzRZbw&s"
@@ -204,7 +204,7 @@
                         </li>
                     </ul>
                 </div>
-            </div> -->
+            </div> 
 
             <div class="mt-8 border-t border-gray-300 pt-8">
                 <div class="sm:flex sm:justify-between">
