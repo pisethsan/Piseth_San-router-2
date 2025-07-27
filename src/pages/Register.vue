@@ -41,11 +41,11 @@
                         </select> -->
                 </div>
 
-                <!-- <div>
+                <div>
                     <label class="block text-sm font-medium text-gray-700">Password</label>
                     <input v-model="password" type="password" required
                         class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-300 focus:outline-none" />
-                </div> -->
+                </div>
 
                 <button type="submit"
                     class="w-full bg-gradient-to-r from-pink-500 to-indigo-500 text-white py-2 rounded-lg font-semibold hover:from-pink-600 hover:to-indigo-600 transition">
