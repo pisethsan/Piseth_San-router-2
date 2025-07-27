@@ -78,7 +78,7 @@ export default {
     methods: {
         async handleSignup() {
             try {
-                const res = await axios.post('http://6886024af52d34140f6b1fe4.mockapi.io/registers', {
+                const res = await axios.post('http://6886024af52d34140f6b1fe4.mockapi.io/api/v1/registers', {
                     name: this.name,
                     username: this.username,
                     email: this.email,
