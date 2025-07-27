@@ -5,7 +5,7 @@ import About from '@/pages/About.vue'
 import Contact from '@/pages/Contact.vue'
 import Project from '@/pages/Project.vue'
 import NotFound from '@/pages/NotFound.vue'
-import Register from '@/pages/Register.vue'
+// import Register from '@/pages/Register.vue'
 
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     { path: '/contact', component: Contact },
     { path: '/project', component: Project },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-    { path: '/register', component: Register },
+    // { path: '/register', component: Register },
 ]
 
 const router = createRouter({
