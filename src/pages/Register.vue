@@ -78,7 +78,7 @@ export default {
     methods: {
         async handleSignup() {
             try {
-                const res = await axios.post('http://localhost:3000/api/auth/sign-up', {
+                const res = await axios.post('https://pisethsan.netlify.app/api/auth/sign-up', {
                     name: this.name,
                     username: this.username,
                     email: this.email,
