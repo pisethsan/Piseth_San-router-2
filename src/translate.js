@@ -30,7 +30,9 @@ const i18n = createI18n({
             contact_me: "Contact Me",
             contact_des: "We'd love to hear from you. Please fill out the form below.",
             name: "Name",
+            username: "Username",
             email: "Email",
+            age: "Age",
             message: "Message",
             submit: "submit",
             submiting: "Submitting...",
@@ -48,6 +50,12 @@ const i18n = createI18n({
             text_not_found: "Sorry, we couldn’t find the page you’re looking for.",
             go_back_home: "Go back Home",
             contact_support: "Contact Support",
+            register_desc: "Please fill out the form to register as a frontline soldier",
+            enter_your_age: "Enter your age",
+            registering: "Registering...",
+            register: "Register",
+            role: "Role",
+
         },
         khm: {
             english: 'English',
@@ -75,7 +83,9 @@ const i18n = createI18n({
             contact_me: "ទំនាក់ទំនងមកខ្ញុំ",
             contact_des: "យើងចង់មតិពីអ្នក។ សូមបំពេញទម្រង់ខាងក្រោមបំពេញ។",
             name: "ឈ្មោះ",
+            username: "ឈ្មោះអ្នកប្រើ",
             email: "អ៊ីមែល",
+            age: "អាយុ",
             message: "សារ",
             submit: "បញ្ចូន",
             submiting: "កំពុង​បញ្ចូន...",
@@ -93,7 +103,12 @@ const i18n = createI18n({
             text_not_found: "សូមអភ័យទោស យើងរកមិនឃើញទំព័រដែលអ្នកកំពុងស្វែងរកទេ។",
             go_back_home: "ត្រឡប់ទៅទំព័រដើមវិញ។",
             contact_support: "ទាក់ទងផ្នែកជំនួយ",
-            
+            register_desc: "សូមចូរបំពេញទម្រង់ដើម្បីចុះឈ្មោះធ្វើជាទាហ៊ានជួរមុខ",
+            enter_your_age: "បញ្ចូលអាយុរបស់អ្នក",
+            registering: "កំពុងចុះឈ្មោះ...",
+            register: "ចុះឈ្មោះ",
+            role: "តួនាទី",
+
         }
     }
 }
