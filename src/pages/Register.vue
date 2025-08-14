@@ -2,7 +2,7 @@
     <div
         class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 flex items-center justify-center ">
         <div class="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
-            <h2 class="text-3xl font-bold text-indigo-700 text-center mb-4">{{ $t('register_desc') }}</h2>
+            <h2 class="text-3xl font-bold text-indigo-700 text-center mb-4">{{ $t('register_desc_test-form') }}</h2>
 
             <form @submit.prevent="handleSignup" class="space-y-4">
                 <div>
